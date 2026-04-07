@@ -9,7 +9,7 @@ const AboutSection = () => {
     <section id="tentang" className="py-20 px-6">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <p className="text-sm font-medium text-primary mb-4">Tentang saya</p>
+          {/* <p className="text-sm font-medium text-primary mb-4">Tentang saya</p> */}
           <h2 className="font-heading text-3xl md:text-4xl leading-snug mb-6">
             Saya Salma Friani, wajah di balik <em>Makeup</em> Segar. Saya ahli menciptakan
             penampilan yang membuat klien merasa berseri dan percaya diri.
@@ -18,7 +18,7 @@ const AboutSection = () => {
             onClick={() => scrollTo("karya")}
             className="bg-primary text-primary-foreground px-6 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition-opacity"
           >
-            lihat karya saya
+            Lihat Project
           </button>
         </div>
         <div className="flex justify-center md:justify-end">

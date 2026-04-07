@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['Playfair Display', 'serif'],
+        heading: ['Roboto', 'serif'],
         body: ['Inter', 'sans-serif'],
       },
       colors: {
