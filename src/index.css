@@ -5,36 +5,36 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   :root {
-    --background: 40 33% 96%;
-    --foreground: 0 0% 8%;
+    /* Warm Craft Palette */
+    --background: 60 9% 98%;          /* #fafaf9 */
+    --foreground: 24 10% 16%;         /* #292524 */
 
-    --card: 40 33% 96%;
-    --card-foreground: 0 0% 8%;
+    --card: 60 9% 98%;                /* #fafaf9 */
+    --card-foreground: 24 10% 16%;    /* #292524 */
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 8%;
+    --popover-foreground: 24 10% 16%; /* #292524 */
 
-    --primary: 330 80% 65%;
+    --primary: 33 95% 44%;            /* #d97706 */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 43 90% 65%;
-    --secondary-foreground: 0 0% 8%;
+    --secondary: 36 38% 94%;          /* #f5f0e8 */
+    --secondary-foreground: 24 10% 16%; /* #292524 */
 
-    --muted: 40 20% 90%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 36 25% 92%;
+    --muted-foreground: 24 8% 40%;
 
-    --accent: 0 70% 35%;
+    --accent: 33 95% 44%;             /* sama dengan primary biar konsisten */
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 40 20% 85%;
-    --input: 40 20% 85%;
-    --ring: 330 80% 65%;
+    --border: 36 20% 88%;
+    --input: 36 20% 88%;
+    --ring: 33 95% 44%;               /* primary */
 
     --radius: 0.5rem;
 

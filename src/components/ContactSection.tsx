@@ -228,7 +228,7 @@ const ContactSection = () => {
               </a>
 
               <a
-                href="https://instagram.com/"
+                href="https://instagram.com/mickael.naldy"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 group"
@@ -242,7 +242,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="text-xs text-muted-foreground">Instagram</p>
-                  <p className="text-sm font-medium group-hover:text-primary transition-colors">@salmafriani</p>
+                  <p className="text-sm font-medium group-hover:text-primary transition-colors">@mickael.naldy</p>
                 </div>
               </a>
             </div>
