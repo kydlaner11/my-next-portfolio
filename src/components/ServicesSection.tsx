@@ -13,7 +13,7 @@ const ServicesSection = () => {
     <section className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center justify-between mb-10">
-          <p className="text-sm font-semibold">Layanan saya</p>
+          <p className="font-heading text-3xl md:text-6xl leading-tight max-w-sm">Layanan saya</p>
           <button
             onClick={() => scrollTo("kontak")}
             className="bg-primary text-primary-foreground px-6 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition-opacity"

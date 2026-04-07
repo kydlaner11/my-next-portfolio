@@ -62,8 +62,8 @@ const PortfolioSection = () => {
 
         {/* Header */}
         <div className="flex items-end justify-between mb-12">
-          <h2 className="font-heading text-3xl md:text-4xl leading-tight max-w-sm">
-            Penampilan untuk<br />setiap kesempatan
+          <h2 className="font-heading text-3xl md:text-6xl leading-tight max-w-sm">
+            Selected Work
           </h2>
           <span className="text-xs text-muted-foreground tracking-widest uppercase hidden md:block">
             {portfolios.length} Kategori

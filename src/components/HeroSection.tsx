@@ -8,7 +8,7 @@ const HeroSection = () => {
   return (
     <section className="pt-20 pb-16 flex flex-col items-center text-center px-6">
       <h1 className="font-bold text-6xl md:text-8xl lg:text-9xl tracking-tight leading-none mt-8 mb-6">
-        DEV. DESIGN.
+        DEV-DESIGN
       </h1>
       <div className="w-full max-w-6xl overflow-hidden rounded-2xl mb-8">
         <img
