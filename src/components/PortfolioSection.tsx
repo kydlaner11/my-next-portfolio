@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import bridalImg from "@/assets/bridal.jpg";
 import eventImg from "@/assets/event.jpg";
+import trackingImg from "@/assets/tracking.png";
 import editorialImg from "@/assets/editorial.jpg";
 import everydayImg from "@/assets/everyday.jpg";
 // import weddingImg from "@/assets/wedding.jpg";
@@ -17,10 +18,10 @@ const portfolios = [
   },
   {
     slug: "acara",
-    title: "Siap Acara",
-    tag: "Event",
+    title: "System Tracking",
+    tag: "Feature System",
     desc: "Tampilan profesional untuk acara spesial",
-    img: eventImg,
+    img: trackingImg,
   },
   {
     slug: "editorial",
@@ -50,82 +51,78 @@ const portfolios = [
     desc: "Sorotan penuh pesona untuk malam spesial",
     img: editorialImg,
   },
+  {
+    slug: "glamour",
+    title: "Glamour Night",
+    tag: "Glamour",
+    desc: "Sorotan penuh pesona untuk malam spesial",
+    img: eventImg,
+  },
 ];
 
 const PortfolioSection = () => {
   const navigate = useNavigate();
-  const [hovered, setHovered] = useState<string | null>(null);
 
   return (
-    <section id="karya" className="py-24 px-6">
-      <div className="max-w-6xl mx-auto">
+    <section id="karya" className="py-20 px-6">
+      <div className="max-w-5xl mx-auto">
 
         {/* Header */}
-        <div className="flex items-end justify-between mb-12">
-          <h2 className="font-heading text-3xl md:text-6xl leading-tight max-w-sm">
-            Selected Work
+        <div className="mb-10">
+          <div className="flex items-center gap-2 mb-4">
+            <span className="w-1.5 h-1.5 rounded-full bg-foreground inline-block" />
+            <span className="text-[11px] tracking-[0.15em] uppercase text-muted-foreground">
+              Selected Work
+            </span>
+          </div>
+          <h2 className="font-heading text-[clamp(2.2rem,6vw,3.8rem)] font-normal leading-[1.05] max-w-lg">
+            Karya yang <em className="italic text-muted-foreground not-italic font-normal">berbicara</em> sendiri
           </h2>
-          <span className="text-xs text-muted-foreground tracking-widest uppercase hidden md:block">
-            {portfolios.length} Kategori
-          </span>
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
+        <div className="grid grid-cols-3 gap-[4px]">
           {portfolios.map((item, i) => {
-            const isTall = i === 0 || i === 3; // row-span untuk variasi tinggi
+            const isTall = i === 0 || i === 3;
             return (
               <button
                 key={item.slug}
                 onClick={() => navigate(`/portfolio/${item.slug}`)}
-                onMouseEnter={() => setHovered(item.slug)}
-                onMouseLeave={() => setHovered(null)}
-                className={`group relative overflow-hidden rounded-2xl text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-primary
-                  ${isTall ? "md:row-span-2" : ""}`}
-                style={{ aspectRatio: isTall ? undefined : "4/5" }}
+                className={`group relative overflow-hidden bg-muted text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-primary
+                  ${isTall ? "row-span-2" : ""}`}
               >
                 {/* Image */}
                 <img
                   src={item.img}
                   alt={item.title}
-                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                  style={{ height: isTall ? "100%" : undefined }}
+                  className={`w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]
+                    ${isTall ? "h-full" : "aspect-[4/5]"}`}
                 />
 
-                {/* Overlay gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                {/* Tag pill */}
-                <div className="absolute top-3 left-3">
-                  <span className="text-[10px] font-semibold tracking-widest uppercase bg-white/20 backdrop-blur-sm text-white px-2.5 py-1 rounded-full border border-white/20">
-                    {item.tag}
-                  </span>
-                </div>
-
-                {/* Text bottom */}
-                <div
-                  className="absolute bottom-0 left-0 right-0 p-4 translate-y-1 group-hover:translate-y-0 transition-transform duration-300"
-                >
-                  <p className="text-white font-heading text-base md:text-lg font-semibold leading-tight mb-0.5">
-                    {item.title}
-                  </p>
-                  <p
-                    className="text-white/70 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75"
-                  >
-                    {item.desc}
-                  </p>
-                </div>
-
-                {/* Arrow icon on hover */}
-                <div className="absolute top-3 right-3 w-7 h-7 rounded-full bg-white/20 backdrop-blur-sm border border-white/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                {/* Arrow */}
+                <div className="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/15 border border-white/25 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <svg width="11" height="11" viewBox="0 0 12 12" fill="none">
                     <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
+                </div>
+
+                {/* Meta */}
+                <div className="flex justify-between items-baseline px-3 py-2.5 border-t border-border bg-background">
+                  <span className="text-[13px] text-foreground">{item.title}</span>
+                  <span className="text-[11px] text-muted-foreground tracking-wide">{item.tag}</span>
                 </div>
               </button>
             );
           })}
         </div>
+
+        <p className="text-right text-[11px] tracking-widest uppercase text-muted-foreground mt-4">
+          {portfolios.length} PORTFOLIO PROJECT
+        </p>
+
       </div>
     </section>
   );
