@@ -1,4 +1,4 @@
-import footerBg from "@/assets/footer-bg.jpg";
+import footerBg from "@/assets/footer.jpg";
 
 const FooterSection = () => {
   return (

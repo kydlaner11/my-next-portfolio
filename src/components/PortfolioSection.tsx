@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import bridalImg from "@/assets/bridal.jpg";
 import eventImg from "@/assets/event.jpg";
-import trackingImg from "@/assets/tracking.png";
+import trackingImg from "@/assets/portfoliodetail/portone/tracking.png";
 import editorialImg from "@/assets/editorial.jpg";
 import everydayImg from "@/assets/everyday.jpg";
 // import weddingImg from "@/assets/wedding.jpg";

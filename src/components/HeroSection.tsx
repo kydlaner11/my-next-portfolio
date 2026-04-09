@@ -1,4 +1,4 @@
-import heroImg from "@/assets/hero.jpg";
+import heroImg from "@/assets/hero1.jpg";
 
 const HeroSection = () => {
   const scrollTo = (id: string) => {

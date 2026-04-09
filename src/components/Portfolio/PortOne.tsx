@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import eventImg from "@/assets/tracking.png";
+import eventImg from "@/assets/portfoliodetail/portone/tracking.png";
 import editorialImg from "@/assets/editorial.jpg";
 import everydayImg from "@/assets/everyday.jpg";
 
