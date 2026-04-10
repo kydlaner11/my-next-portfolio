@@ -1,61 +1,51 @@
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import bridalImg from "@/assets/bridal.jpg";
 import eventImg from "@/assets/event.jpg";
 import trackingImg from "@/assets/portfoliodetail/portone/tracking.png";
 import editorialImg from "@/assets/editorial.jpg";
 import everydayImg from "@/assets/everyday.jpg";
-// import weddingImg from "@/assets/wedding.jpg";
-// import glamourImg from "@/assets/glamour.jpg";
 
 const portfolios = [
   {
-    slug: "pengantin",
-    title: "Kecantikan Pengantin",
-    tag: "Bridal",
-    desc: "Glamor lembut untuk hari istimewa Anda",
+    slug: "bridal-beauty",
+    title: "Bridal Beauty",
+    tag: "Wedding",
+    desc: "Soft glamour aesthetics for special occasions",
     img: bridalImg,
   },
   {
-    slug: "acara",
+    slug: "tracking-system",
     title: "System Tracking",
-    tag: "Feature System",
-    desc: "Tampilan profesional untuk acara spesial",
+    tag: "Fullstack",
+    desc: "Real-time logistics and data monitoring system",
     img: trackingImg,
   },
   {
-    slug: "editorial",
-    title: "Editorial & Kreatif",
-    tag: "Editorial",
-    desc: "Pernyataan berani untuk pemotretan",
+    slug: "editorial-creative",
+    title: "Editorial & Creative",
+    tag: "Photography",
+    desc: "Bold visual statements for creative campaigns",
     img: editorialImg,
   },
   {
-    slug: "sehari-hari",
-    title: "Kilau Sehari-hari",
-    tag: "Everyday",
-    desc: "Tampilan menawan untuk rutinitas harian",
+    slug: "everyday-glow",
+    title: "Everyday Glow",
+    tag: "Lifestyle",
+    desc: "Refined aesthetics for daily digital presence",
     img: everydayImg,
   },
   {
-    slug: "pernikahan",
-    title: "Pernikahan Mewah",
-    tag: "Wedding",
-    desc: "Elegance tak terlupakan di hari bahagia",
-    img: everydayImg,
-  },
-  {
-    slug: "glamour",
+    slug: "glamour-night",
     title: "Glamour Night",
-    tag: "Glamour",
-    desc: "Sorotan penuh pesona untuk malam spesial",
+    tag: "Nightlife",
+    desc: "High-end visual capture for exclusive events",
     img: editorialImg,
   },
   {
-    slug: "glamour",
-    title: "Glamour Night",
-    tag: "Glamour",
-    desc: "Sorotan penuh pesona untuk malam spesial",
+    slug: "project-event",
+    title: "Exclusive Events",
+    tag: "Branding",
+    desc: "Comprehensive visual identity for large scale events",
     img: eventImg,
   },
 ];
@@ -64,65 +54,91 @@ const PortfolioSection = () => {
   const navigate = useNavigate();
 
   return (
-    <section id="karya" className="py-20 px-6">
-      <div className="max-w-5xl mx-auto">
-
-        {/* Header */}
-        <div className="mb-10">
-          <div className="flex items-center gap-2 mb-4">
-            <span className="w-1.5 h-1.5 rounded-full bg-foreground inline-block" />
-            <span className="text-[11px] tracking-[0.15em] uppercase text-muted-foreground">
-              Selected Work
+    <section id="karya" className="py-32 px-6 bg-background">
+      <div className="max-w-7xl mx-auto">
+        
+        {/* Header - More Minimalist & Bold */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-6">
+          <div className="max-w-xl">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="w-8 h-[1px] bg-primary"></span>
+              <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-primary">Selected Works</span>
+            </div>
+            <h2 className="font-heading text-5xl md:text-7xl leading-[0.9] tracking-tighter">
+              DONE <br /> <span className="text-muted-foreground italic">PROJECTS</span>
+            </h2>
+          </div>
+          <div className="text-right">
+            <span className="text-[10px] font-bold text-muted-foreground tracking-[0.2em] uppercase">
+              {portfolios.length} FEATURED PROJECTS
             </span>
           </div>
-          <h2 className="font-heading text-[clamp(2.2rem,6vw,3.8rem)] font-normal leading-[1.05] max-w-lg">
-            Karya yang <em className="italic text-muted-foreground not-italic font-normal">berbicara</em> sendiri
-          </h2>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-3 gap-[4px]">
-          {portfolios.map((item, i) => {
-            const isTall = i === 0 || i === 3;
-            return (
-              <button
-                key={item.slug}
-                onClick={() => navigate(`/portfolio/${item.slug}`)}
-                className={`group relative overflow-hidden bg-muted text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-primary
-                  ${isTall ? "row-span-2" : ""}`}
-              >
-                {/* Image */}
+        {/* Grid - Clean Minimalist style */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+          {portfolios.map((item) => (
+            <div 
+              key={item.slug}
+              className="group cursor-pointer"
+              onClick={() => navigate(`/portfolio/${item.slug}`)}
+            >
+              {/* Image Container with cleaner hover effect */}
+              <div className="relative aspect-[4/5] overflow-hidden rounded-sm bg-muted mb-6">
                 <img
                   src={item.img}
                   alt={item.title}
-                  className={`w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]
-                    ${isTall ? "h-full" : "aspect-[4/5]"}`}
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                 />
-
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-                {/* Arrow */}
-                <div className="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-white/15 border border-white/25 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <svg width="11" height="11" viewBox="0 0 12 12" fill="none">
-                    <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                {/* Subtle dark tint on hover only */}
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-500" />
+                
+                {/* Floating Arrow Icon */}
+                <div className="absolute bottom-6 right-6 w-12 h-12 bg-background flex items-center justify-center rounded-full translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                  <svg width="20" height="20" viewBox="0 0 12 12" fill="none">
+                    <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
+              </div>
 
-                {/* Meta */}
-                <div className="flex justify-between items-baseline px-3 py-2.5 border-t border-border bg-background">
-                  <span className="text-[13px] text-foreground">{item.title}</span>
-                  <span className="text-[11px] text-muted-foreground tracking-wide">{item.tag}</span>
+              {/* Info Area - Placed Outside for "Tegas" look */}
+              <div className="space-y-2 px-1">
+                <div className="flex items-center gap-3">
+                  <span className="text-[9px] font-black tracking-[0.2em] uppercase text-primary bg-primary/5 px-2 py-0.5 rounded">
+                    {item.tag}
+                  </span>
                 </div>
-              </button>
-            );
-          })}
+                <h3 className="font-heading text-2xl md:text-3xl tracking-tight group-hover:text-primary transition-colors">
+                  {item.title}
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2">
+                  {item.desc}
+                </p>
+                <div className="pt-2">
+                  <span className="text-[10px] font-bold border-b border-foreground/20 pb-0.5 group-hover:border-primary transition-colors uppercase tracking-widest">
+                    Explore Project
+                  </span>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
-
-        <p className="text-right text-[11px] tracking-widest uppercase text-muted-foreground mt-4">
-          {portfolios.length} PORTFOLIO PROJECT
-        </p>
-
+      </div>
+      <div className="mt-20 flex justify-center">
+        <button 
+          onClick={() => navigate("/portfolio")} // Arahkan ke page baru ini
+          className="group flex items-center gap-4 border border-border px-12 py-5 rounded-full text-xs font-bold tracking-widest uppercase hover:bg-foreground hover:text-background transition-all duration-500"
+        >
+          Explore All Projects
+          <div className="relative overflow-hidden w-4 h-4">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" className="absolute group-hover:translate-x-6 transition-transform duration-300">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" className="absolute -translate-x-6 group-hover:translate-x-0 transition-transform duration-300">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </div>
+        </button>
       </div>
     </section>
   );

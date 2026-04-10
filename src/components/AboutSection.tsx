@@ -85,15 +85,15 @@ const AboutSection = () => {
             </div>
 
             <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl leading-[1.1] mb-8">
-              Membangun digital yang <em className="italic text-muted-foreground">berdampak</em> nyata
+              Crafting digital experiences that <em className="italic text-muted-foreground">make a difference</em>
             </h2>
 
             <div className="space-y-6 text-base text-muted-foreground leading-relaxed mb-10 max-w-2xl">
               <p>
-                Halo, saya <span className="text-foreground font-semibold">Mickael</span> — seorang Website Developer lulusan Sistem Informasi dari Telkom University Surabaya. Saya menjembatani celah antara desain yang estetik dan performa teknis yang tangguh.
+                Hi, I'm <span className="text-foreground font-semibold">Mickael</span> — a Web Developer and Information Systems graduate from Telkom University Surabaya. I bridge the gap between aesthetic design and robust technical performance.
               </p>
               <p>
-                Fokus utama saya adalah membangun aplikasi web yang tidak hanya berfungsi dengan baik, tetapi juga memberikan pengalaman pengguna yang berkesan. Melalui brand <span className="text-foreground font-medium italic">HEALU</span>, saya terus mengeksplorasi potensi kreatif dalam dunia digital dan teknologi.
+                My primary focus is building web applications that not only function seamlessly but also provide a memorable user experience. Through my brand, HEALU, I continue to explore the creative potential within the world of digital and technology.
               </p>
             </div>
 

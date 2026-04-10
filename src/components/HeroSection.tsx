@@ -27,7 +27,7 @@ const HeroSection = () => {
 
         {/* Main Heading */}
         <h3 className="font-heading text-lg md:text-2xl tracking-tight mb-4">
-          HI! I'M <em className="italic font-normal text-muted-foreground not-italic">MICKAEL</em><br />
+          HI! I'M <em className="italic font-normal text-muted-foreground">MICKAEL</em><br />
         </h3>
         <h1 className="font-heading text-[clamp(3.5rem,12vw,9rem)] font-normal leading-[0.9] tracking-tighter mb-10">
           <span className="text-primary">FULLSTACK</span> DEV
@@ -54,8 +54,8 @@ const HeroSection = () => {
         {/* Subtext & CTA */}
         <div className="mt-16 max-w-2xl mx-auto flex flex-col items-center">
           <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-10">
-            Membangun pengalaman digital yang menggabungkan fungsionalitas sistem informasi 
-            dengan estetika desain modern.
+            Crafting digital experiences that bridge the gap between information system 
+            functionality and modern design aesthetics.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center gap-4">
@@ -63,14 +63,14 @@ const HeroSection = () => {
               onClick={() => scrollTo("kontak")}
               className="group relative bg-foreground text-background px-10 py-4 rounded-full text-xs font-bold tracking-widest uppercase overflow-hidden hover:bg-primary hover:text-primary-foreground transition-all duration-300"
             >
-              <span className="relative z-10">Mulai Konsultasi</span>
+              <span className="relative z-10">Start Consultation</span>
             </button>
             
             <button
               onClick={() => scrollTo("karya")}
               className="px-10 py-4 rounded-full text-xs font-bold tracking-widest uppercase border border-border hover:bg-muted transition-colors"
             >
-              Lihat Portfolio
+              View Projects
             </button>
           </div>
         </div>

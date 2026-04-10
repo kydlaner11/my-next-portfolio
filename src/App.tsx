@@ -5,7 +5,9 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
-import PortOne from "./components/Portfolio/PortOne.tsx";
+import PortOne from "./components/portfolio/PortOne.tsx";
+import PortfolioPage from "./components/portfolio/PortfolioPage.tsx";
+import ScrollToHash from "./components/utils/ScrollToHash.tsx";
 
 const queryClient = new QueryClient();
 
@@ -15,8 +17,10 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToHash />
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/portfolio/" element={<PortfolioPage />} />
           <Route path="/portfolio/:slug" element={<PortOne />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
