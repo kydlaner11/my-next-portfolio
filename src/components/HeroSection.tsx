@@ -9,11 +9,11 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative pt-32 pb-20 flex flex-col items-center text-center px-6 overflow-hidden">
+    <section className="relative pt-20 pb-20 flex flex-col items-center text-center px-6 overflow-hidden">
       {/* Background Decorative Text / Blur */}
       <div className="absolute top-20 left-1/2 -translate-x-1/2 w-full h-full -z-10 opacity-20 blur-[120px] bg-primary/30 rounded-full" />
 
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         {/* Label Kecil */}
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border bg-muted/50 mb-8 animate-fade-in">
           <span className="relative flex h-2 w-2">
@@ -29,7 +29,7 @@ const HeroSection = () => {
         <h3 className="font-heading text-lg md:text-2xl tracking-tight mb-4">
           HI! I'M <em className="italic font-normal text-muted-foreground">MICKAEL</em><br />
         </h3>
-        <h1 className="font-heading text-[clamp(3.5rem,12vw,9rem)] font-normal leading-[0.9] tracking-tighter mb-10">
+        <h1 className="font-heading text-[clamp(3rem,12vw,9rem)] font-normal leading-[0.9] tracking-tighter mb-10">
           <span className="text-primary">FULLSTACK</span> DEV
         </h1>
 
@@ -52,8 +52,8 @@ const HeroSection = () => {
         </div>
 
         {/* Subtext & CTA */}
-        <div className="mt-16 max-w-2xl mx-auto flex flex-col items-center">
-          <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-10">
+        <div className="mt-10 max-w-2xl mx-auto flex flex-col items-center">
+          <p className="hidden md:block text-base md:text-lg text-muted-foreground leading-relaxed mb-10">
             Crafting digital experiences that bridge the gap between information system 
             functionality and modern design aesthetics.
           </p>

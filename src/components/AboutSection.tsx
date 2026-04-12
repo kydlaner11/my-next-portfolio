@@ -44,7 +44,7 @@ const AboutSection = () => {
 
   return (
     <section id="tentang" className="py-24 px-6 overflow-hidden bg-background">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-5 gap-12 md:gap-20 items-center">
 
           {/* Left: Image with Decorative Elements */}
