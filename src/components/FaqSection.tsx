@@ -2,10 +2,10 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const faqs = [
-  {
-    q: "What is the cost of a typical website project?",
-    a: "Prices start at $350. It varies based on the project's goals, complexity, and deliverables. I offer milestone-based payment so you stay in control throughout the process.",
-  },
+  // {
+  //   q: "What is the cost of a typical website project?",
+  //   a: "Prices start at $350. It varies based on the project's goals, complexity, and deliverables. I offer milestone-based payment so you stay in control throughout the process.",
+  // },
   {
     q: "How long does a typical website project take?",
     a: "It can take anywhere from 1 week to 8 weeks, depending on the project scope and deliverables. A simple landing page is usually 1–2 weeks; complex fullstack systems take longer.",
@@ -35,7 +35,7 @@ const FaqSection = () => {
 
   return (
     <section className="py-32 px-6 bg-white text-black font-sans">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
 
         {/* Header */}
         <div className="flex items-center gap-2 mb-6">

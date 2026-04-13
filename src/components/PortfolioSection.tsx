@@ -7,46 +7,11 @@ import everydayImg from "@/assets/everyday.jpg";
 
 const portfolios = [
   {
-    slug: "bridal-beauty",
-    title: "Bridal Beauty",
-    tag: "Wedding",
-    desc: "Soft glamour aesthetics for special occasions",
-    img: bridalImg,
-  },
-  {
     slug: "tracking-system",
     title: "System Tracking",
     tag: "Fullstack",
-    desc: "Real-time logistics and data monitoring system",
+    desc: "logistics and data monitoring system",
     img: trackingImg,
-  },
-  {
-    slug: "editorial-creative",
-    title: "Editorial & Creative",
-    tag: "Photography",
-    desc: "Bold visual statements for creative campaigns",
-    img: editorialImg,
-  },
-  {
-    slug: "everyday-glow",
-    title: "Everyday Glow",
-    tag: "Lifestyle",
-    desc: "Refined aesthetics for daily digital presence",
-    img: everydayImg,
-  },
-  {
-    slug: "glamour-night",
-    title: "Glamour Night",
-    tag: "Nightlife",
-    desc: "High-end visual capture for exclusive events",
-    img: editorialImg,
-  },
-  {
-    slug: "project-event",
-    title: "Exclusive Events",
-    tag: "Branding",
-    desc: "Comprehensive visual identity for large scale events",
-    img: eventImg,
   },
 ];
 
@@ -55,17 +20,19 @@ const PortfolioSection = () => {
 
   return (
     <section id="karya" className="py-32 px-6 bg-background">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         
         {/* Header - More Minimalist & Bold */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-6">
           <div className="max-w-xl">
             <div className="flex items-center gap-2 mb-4">
-              <span className="w-8 h-[1px] bg-primary"></span>
-              <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-primary">Selected Works</span>
+              <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+              <span className="text-[10px] tracking-[0.3em] uppercase text-muted-foreground font-semibold">
+                Selected Works
+              </span>
             </div>
             <h2 className="font-heading text-5xl md:text-7xl leading-[0.9] tracking-tighter">
-              DONE <br /> <span className="text-muted-foreground italic">PROJECTS</span>
+              Done <br /> <span className="text-muted-foreground italic">Projects</span>
             </h2>
           </div>
           <div className="text-right">

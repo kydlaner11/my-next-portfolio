@@ -30,7 +30,7 @@ const ServicesSection = () => {
 
   return (
     <section className="py-32 px-6 bg-white text-black font-sans">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
 
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">

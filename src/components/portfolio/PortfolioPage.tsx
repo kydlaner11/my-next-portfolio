@@ -3,26 +3,18 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 // Mockup images - ganti dengan asset aslimu
-import img1 from "@/assets/bridal.jpg";
-import img2 from "@/assets/event.jpg";
-import img3 from "@/assets/everyday.jpg";
+import img1 from "@/assets/portfoliodetail/portone/tracking-hero.png";
+import img2 from "@/assets/portfoliodetail/portone/tracking.png";
+import img3 from "@/assets/portfoliodetail/portone/tracking-1.png";
 
 const allPortfolios = [
   { 
     year: "2026", 
     slug: "tracking-system", 
-    title: "Real-time Tracking System", 
+    title: "Tracking Truck System", 
     tag: "Fullstack", 
-    stack: ["React", "Node.js", "Socket.io"], 
+    stack: ["PHP", "JavaScript", "Leaflet.js", "MySQL"], 
     images: [img1, img2, img3] // Ganti dengan 3 screenshot project terkait
-  },
-  { 
-    year: "2025", 
-    slug: "bridal-beauty", 
-    title: "Bridal Beauty Platform", 
-    tag: "Frontend", 
-    stack: ["Next.js", "Tailwind", "Framer"], 
-    images: [img2, img3, img1] 
   },
   // ... tambahkan images untuk data lainnya
 ];

@@ -44,7 +44,7 @@ const AboutSection = () => {
 
   return (
     <section id="tentang" className="py-24 px-6 overflow-hidden bg-background">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-5 gap-12 md:gap-20 items-center">
 
           {/* Left: Image with Decorative Elements */}
@@ -85,15 +85,15 @@ const AboutSection = () => {
             </div>
 
             <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl leading-[1.1] mb-8">
-              Crafting digital experiences that <em className="italic text-muted-foreground">make a difference</em>
+              I build web products that <em className="italic text-muted-foreground">ship fast and scale clean.</em>
             </h2>
 
             <div className="space-y-6 text-base text-muted-foreground leading-relaxed mb-10 max-w-2xl">
               <p>
-                Hi, I'm <span className="text-foreground font-semibold">Mickael</span> — a Web Developer and Information Systems graduate from Telkom University Surabaya. I bridge the gap between aesthetic design and robust technical performance.
+                Hi, I'm <span className="text-foreground font-semibold">Mickael</span> — I’m a full-stack developer who started with code, grew curious about web design, and is now learning the business side of digital products.
               </p>
               <p>
-                My primary focus is building web applications that not only function seamlessly but also provide a memorable user experience. Through my brand, HEALU, I continue to explore the creative potential within the world of digital and technology.
+                I’m born in 2003, based in Indonesia. I learn best by doing, not by reading too much. I like things that feel real—code, music, sport, travel, hiking.
               </p>
             </div>
 

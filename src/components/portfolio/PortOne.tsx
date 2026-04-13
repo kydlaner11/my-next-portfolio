@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import eventImg from "@/assets/portfoliodetail/portone/tracking.png";
-import editorialImg from "@/assets/editorial.jpg";
-import everydayImg from "@/assets/everyday.jpg";
+import trackingImg from "@/assets/portfoliodetail/portone/tracking.png";
+import trackingheroImg from "@/assets/portfoliodetail/portone/tracking-hero.png";
+import tracking1Img from "@/assets/portfoliodetail/portone/tracking-1.png";
 
 // ─── Animation variants ───────────────────────────────────────────────────────
 const fadeInUp = {
@@ -41,22 +41,46 @@ type PortfolioItem = {
   stack?: string[];
   archTiers?: ArchTier[];
   timeline?: { week: string; desc: string }[];
+  protectedurl?: number;
   liveUrl?: string;
   liveLabel?: string;
 };
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 const portfolioData: Record<string, PortfolioItem> = {
-  acara: {
+  "tracking-system": {
     tag: "Case Study — Fullstack",
     title: "System ",
     titleEm: "Tracking Truck",
     client: "PT UNICHEM CANDI INDONESIA",
     year: "2026",
     role: "FULLSTACK DEVELOPER",
-    duration: "6 Weeks",
-    heroImg: eventImg,
-    detailImgs: [eventImg, everydayImg, editorialImg],
+    duration: "-",
+    heroImg: trackingheroImg,
+    detailImgs: [trackingheroImg, tracking1Img],
+    problem: {
+      title: "Manual monitoring that slows everything down",
+      desc: "The client relied on spreadsheets and manual reports to track truck locations and delivery schedules. Administrators spent hours each day cross-checking data across multiple sources, leading to delayed responses, missed updates, and no single source of truth for fleet status.",
+    },
+    solution: {
+      title: "A centralized, tracking platform",
+      desc: "Built a web-based tracking system with a live map dashboard, journey plan management, and history logs. Monitoring shifted from manual spreadsheet checks to a single screen — with real-time location updates and full route history available instantly.",
+    },
+    stack: ["PHP", "MySQL", "Sybase", "JavaScript", "Leaflet.js"],
+    protectedurl: 1,
+    liveUrl: "https://unichem.co.id",
+    liveLabel: "unichem.co.id — live & production ready",
+  },
+  "tracking-system1": {
+    tag: "Case Study — Fullstack",
+    title: "System ",
+    titleEm: "Tracking Truck",
+    client: "PT UNICHEM CANDI INDONESIA",
+    year: "2026",
+    role: "FULLSTACK DEVELOPER",
+    duration: "-",
+    heroImg: trackingheroImg,
+    detailImgs: [trackingImg, tracking1Img],
     stats: [
       { num: "~3h", label: "Waktu admin terpangkas per hari" },
       { num: "1×", label: "Klik konfirmasi, dari 3 langkah manual" },
@@ -128,7 +152,7 @@ const PortfolioDetail = () => {
   const {
     tag, title, titleEm, client, year, role, duration, heroImg,
     detailImgs, stats, problem, solution, features,
-    stack, archTiers, timeline, liveUrl, liveLabel,
+    stack, archTiers, timeline, liveUrl, liveLabel, protectedurl,
   } = data;
 
   return (
@@ -296,7 +320,7 @@ const PortfolioDetail = () => {
       )}
 
       {/* ── CTA (optional) ── */}
-      {liveUrl && (
+      {liveUrl && protectedurl == 0 && (
         <motion.div
           variants={fadeInUp}
           className="group relative flex flex-col md:flex-row items-center justify-between p-8 rounded-2xl border border-primary/20 bg-primary/5 overflow-hidden"
@@ -316,6 +340,34 @@ const PortfolioDetail = () => {
               <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </a>
+        </motion.div>
+      )}
+      {protectedurl == 1 && (
+        <motion.div
+          variants={fadeInUp}
+          className="flex items-start gap-4 p-8 rounded-2xl border border-border bg-muted/20"
+        >
+          <div className="w-10 h-10 rounded-xl border border-border bg-muted/30 flex items-center justify-center flex-shrink-0 mt-0.5">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <rect x="2" y="7" width="14" height="9" rx="2.5" stroke="currentColor" strokeWidth="1.2" />
+              <path d="M5.5 7V5a3.5 3.5 0 017 0v2" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+            </svg>
+          </div>
+          <div>
+            <h3 className="font-heading text-2xl font-normal mb-1 text-foreground">
+              Live system access
+            </h3>
+            <p className="text-sm text-muted-foreground">
+              This system runs on the client's internal infrastructure and is not publicly accessible.
+            </p>
+            <span className="inline-flex items-center gap-1.5 mt-3 text-[11px] font-medium px-3 py-1.5 rounded-md bg-amber-50 text-amber-700 dark:bg-amber-950 dark:text-amber-300">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <rect x="1.5" y="5" width="9" height="6" rx="1.5" stroke="currentColor" strokeWidth="1" />
+                <path d="M4 5V3.5a2 2 0 114 0V5" stroke="currentColor" strokeWidth="1" strokeLinecap="round" />
+              </svg>
+              Internal system — URL restricted
+            </span>
+          </div>
         </motion.div>
       )}
 
