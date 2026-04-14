@@ -37,8 +37,8 @@ const ContactWaSection = () => {
 
         {/* Heading */}
         <h2 className="font-heading text-4xl md:text-6xl font-normal leading-[1.1] mb-14 max-w-3xl">
-          Punya ide luar biasa? <br />
-          <em className="italic text-muted-foreground">Mari kita bangun </em> bersama.
+          Have an amazing idea? <br />
+          <em className="italic text-muted-foreground">Let’s build it </em>   together!
         </h2>
 
         <div className="grid md:grid-cols-5 gap-12 md:gap-20 items-start">
@@ -80,14 +80,14 @@ const ContactWaSection = () => {
             {/* Main CTA button */}
             <div className="space-y-4">
               <p className="text-sm text-muted-foreground leading-relaxed max-w-sm">
-                Ceritakan idemu langsung, saya siap membantu kamu mewujudkan proyek impian.
+                Tell me your ideas! I am ready to help you bring your dream projects to life.
               </p>
               <button
                 type="button"
                 onClick={handleDirectContact}
                 className="group flex items-center gap-4 bg-foreground text-background px-10 py-4 rounded-full text-xs font-bold tracking-widest uppercase hover:bg-primary hover:text-primary-foreground transition-all duration-300"
               >
-                Chat di WhatsApp
+                Chat on WhatsApp
                 <svg
                   width="14"
                   height="14"
@@ -104,7 +104,7 @@ const ContactWaSection = () => {
             <div className="bg-muted/30 p-6 rounded-lg space-y-2 border border-border/50">
               <p className="text-[10px] font-bold tracking-widest uppercase text-primary">Availability</p>
               <p className="text-xs text-muted-foreground italic">
-                Saat ini saya menerima proyek baru untuk kuartal ke-2 2026.
+                I'm currently accepting new projects for the second quarter of 2026.
               </p>
             </div>
 

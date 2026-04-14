@@ -1,9 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import bridalImg from "@/assets/bridal.jpg";
-import eventImg from "@/assets/event.jpg";
 import trackingImg from "@/assets/portfoliodetail/portone/tracking.png";
-import editorialImg from "@/assets/editorial.jpg";
-import everydayImg from "@/assets/everyday.jpg";
+import monitoringImg from "@/assets/portfoliodetail/porttwo/monitoring.png";
 
 const portfolios = [
   {
@@ -12,6 +9,13 @@ const portfolios = [
     tag: "Fullstack",
     desc: "logistics and data monitoring system",
     img: trackingImg,
+  },
+  {
+    slug: "monitoring-system",
+    title: "Live Monitoring Dashboard",
+    tag: "Fullstack",
+    desc: "real-time data visualization and monitoring dashboard",
+    img: monitoringImg,
   },
 ];
 

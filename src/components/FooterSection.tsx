@@ -13,7 +13,7 @@ const FooterSection = () => {
           </h2>
           <div className="text-sm leading-relaxed opacity-80">
             <p className="font-semibold mb-1 opacity-100">Mickael Renaldy</p>
-            <p>Jl. Asem Jawa 40, Cibodas, Tangerang 15401</p>
+            <p>Based in Sidoarjo</p>
             <p>Telp: 089524309404</p>
             <p>Email: mickaelg566@gmail.com</p>
             <p>Sosial: @mickael.naldy</p>

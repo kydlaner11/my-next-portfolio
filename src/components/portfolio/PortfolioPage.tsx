@@ -6,6 +6,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import img1 from "@/assets/portfoliodetail/portone/tracking-hero.png";
 import img2 from "@/assets/portfoliodetail/portone/tracking.png";
 import img3 from "@/assets/portfoliodetail/portone/tracking-1.png";
+import img4 from "@/assets/portfoliodetail/porttwo/monitoring.png";
+import img5 from "@/assets/portfoliodetail/porttwo/monitoring-hero.png";
 
 const allPortfolios = [
   { 
@@ -15,6 +17,14 @@ const allPortfolios = [
     tag: "Fullstack", 
     stack: ["PHP", "JavaScript", "Leaflet.js", "MySQL"], 
     images: [img1, img2, img3] // Ganti dengan 3 screenshot project terkait
+  },
+  { 
+    year: "2026", 
+    slug: "monitoring-system", 
+    title: "Live Monitoring Dashboard", 
+    tag: "Fullstack", 
+    stack: ["PHP", "JavaScript", "Leaflet.js", "MySQL"], 
+    images: [img4, img5, img4] // Ganti dengan 3 screenshot project terkait
   },
   // ... tambahkan images untuk data lainnya
 ];

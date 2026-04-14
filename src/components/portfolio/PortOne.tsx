@@ -4,6 +4,8 @@ import { useParams, useNavigate } from "react-router-dom";
 import trackingImg from "@/assets/portfoliodetail/portone/tracking.png";
 import trackingheroImg from "@/assets/portfoliodetail/portone/tracking-hero.png";
 import tracking1Img from "@/assets/portfoliodetail/portone/tracking-1.png";
+import monitoringImg from "@/assets/portfoliodetail/porttwo/monitoring.png";
+import monitoringheroImg from "@/assets/portfoliodetail/porttwo/monitoring-hero.png";
 
 // ─── Animation variants ───────────────────────────────────────────────────────
 const fadeInUp = {
@@ -67,6 +69,29 @@ const portfolioData: Record<string, PortfolioItem> = {
       desc: "Built a web-based tracking system with a live map dashboard, journey plan management, and history logs. Monitoring shifted from manual spreadsheet checks to a single screen — with real-time location updates and full route history available instantly.",
     },
     stack: ["PHP", "MySQL", "Sybase", "JavaScript", "Leaflet.js"],
+    protectedurl: 1,
+    liveUrl: "https://unichem.co.id",
+    liveLabel: "unichem.co.id — live & production ready",
+  },
+  "monitoring-system": {
+    tag: "Case Study — Fullstack",
+    title: "System Live Monitoring ",
+    titleEm: "Dashboard",
+    client: "PT UNICHEM CANDI INDONESIA",
+    year: "2026",
+    role: "FULLSTACK DEVELOPER",
+    duration: "-",
+    heroImg: monitoringheroImg,
+    detailImgs: [monitoringImg, monitoringImg],
+    problem: {
+      title: "Pendaftaran manual yang lambat",
+      desc: "Klien mengandalkan form Google dan WhatsApp untuk pendaftaran kursus. Proses ini memakan waktu admin 3–4 jam per hari dan sering menyebabkan double booking serta data yang tidak sinkron.",
+    },
+    solution: {
+      title: "Platform registrasi terintegrasi",
+      desc: "Membangun web app dengan dashboard admin real-time, sistem slot otomatis, dan notifikasi email. Proses pendaftaran turun dari 3 langkah manual menjadi 1 klik konfirmasi.",
+    },
+    stack: ["PHP", "MySQL", "Sybase", "JavaScript"],
     protectedurl: 1,
     liveUrl: "https://unichem.co.id",
     liveLabel: "unichem.co.id — live & production ready",
