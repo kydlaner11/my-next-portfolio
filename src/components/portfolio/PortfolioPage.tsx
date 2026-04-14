@@ -3,11 +3,12 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 // Mockup images - ganti dengan asset aslimu
-import img1 from "@/assets/portfoliodetail/portone/tracking-hero.png";
-import img2 from "@/assets/portfoliodetail/portone/tracking.png";
-import img3 from "@/assets/portfoliodetail/portone/tracking-1.png";
-import img4 from "@/assets/portfoliodetail/porttwo/monitoring.png";
-import img5 from "@/assets/portfoliodetail/porttwo/monitoring-hero.png";
+import img1 from "@/assets/portfoliodetail/portone/tracking-1.png";
+import img2 from "@/assets/portfoliodetail/portone/tracking-2.png";
+import img3 from "@/assets/portfoliodetail/portone/tracking-3.png";
+import img4 from "@/assets/portfoliodetail/porttwo/monitoring-1.png";
+import img5 from "@/assets/portfoliodetail/porttwo/monitoring-2.png";
+import img6 from "@/assets/portfoliodetail/porttwo/monitoring-3.png";
 
 const allPortfolios = [
   { 
@@ -24,7 +25,7 @@ const allPortfolios = [
     title: "Live Monitoring Dashboard", 
     tag: "Fullstack", 
     stack: ["PHP", "JavaScript", "Leaflet.js", "MySQL"], 
-    images: [img4, img5, img4] // Ganti dengan 3 screenshot project terkait
+    images: [img4, img5, img6] // Ganti dengan 3 screenshot project terkait
   },
   // ... tambahkan images untuk data lainnya
 ];
@@ -128,12 +129,12 @@ const PortfolioPage = () => {
                                 initial={{ y: 20, opacity: 0 }}
                                 animate={{ y: 0, opacity: 1 }}
                                 transition={{ delay: idx * 0.1 + 0.2 }}
-                                className="aspect-video bg-white rounded-lg overflow-hidden border border-black/5 shadow-sm group/img"
+                                className="aspect-[4/5] bg-white rounded-lg overflow-hidden border border-black/5 shadow-sm group/img"
                               >
                                 <img 
                                   src={img} 
                                   alt="preview" 
-                                  className="w-full h-full object-cover grayscale group-hover/img:grayscale-0 transition-all duration-500 scale-105 group-hover/img:scale-100" 
+                                  className="w-full h-full object-cover  transition-all duration-500 scale-105 group-hover/img:scale-100" 
                                 />
                               </motion.div>
                             ))}

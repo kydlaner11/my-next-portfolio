@@ -4,8 +4,14 @@ import { useParams, useNavigate } from "react-router-dom";
 import trackingImg from "@/assets/portfoliodetail/portone/tracking.png";
 import trackingheroImg from "@/assets/portfoliodetail/portone/tracking-hero.png";
 import tracking1Img from "@/assets/portfoliodetail/portone/tracking-1.png";
+import tracking2Img from "@/assets/portfoliodetail/portone/tracking-2.png";
+import tracking3Img from "@/assets/portfoliodetail/portone/tracking-3.png";
+
 import monitoringImg from "@/assets/portfoliodetail/porttwo/monitoring.png";
 import monitoringheroImg from "@/assets/portfoliodetail/porttwo/monitoring-hero.png";
+import monitoring1Img from "@/assets/portfoliodetail/porttwo/monitoring-1.png";
+import monitoring2Img from "@/assets/portfoliodetail/porttwo/monitoring-2.png";
+import monitoring3Img from "@/assets/portfoliodetail/porttwo/monitoring-3.png";
 
 // ─── Animation variants ───────────────────────────────────────────────────────
 const fadeInUp = {
@@ -59,7 +65,7 @@ const portfolioData: Record<string, PortfolioItem> = {
     role: "FULLSTACK DEVELOPER",
     duration: "-",
     heroImg: trackingheroImg,
-    detailImgs: [trackingheroImg, tracking1Img],
+    detailImgs: [tracking1Img, tracking2Img, tracking3Img],
     problem: {
       title: "Manual monitoring that slows everything down",
       desc: "The client relied on spreadsheets and manual reports to track truck locations and delivery schedules. Administrators spent hours each day cross-checking data across multiple sources, leading to delayed responses, missed updates, and no single source of truth for fleet status.",
@@ -82,7 +88,7 @@ const portfolioData: Record<string, PortfolioItem> = {
     role: "FULLSTACK DEVELOPER",
     duration: "-",
     heroImg: monitoringheroImg,
-    detailImgs: [monitoringImg, monitoringImg],
+    detailImgs: [monitoring1Img, monitoring2Img, monitoring3Img],
     problem: {
       title: "Pendaftaran manual yang lambat",
       desc: "Klien mengandalkan form Google dan WhatsApp untuk pendaftaran kursus. Proses ini memakan waktu admin 3–4 jam per hari dan sering menyebabkan double booking serta data yang tidak sinkron.",
@@ -297,7 +303,7 @@ const PortfolioDetail = () => {
             {detailImgs.map((img, i) => (
               <div
                 key={i}
-                className={`overflow-hidden rounded-xl border border-border ${i === 0 ? "col-span-2 aspect-video" : "aspect-[4/5]"}`}
+                className={`overflow-hidden rounded-xl border border-border ${i === 0 ? "aspect-[4/5]" : "aspect-[4/5]"}`}
               >
                 <img src={img} alt="" className="object-cover w-full h-full hover:scale-105 transition-transform duration-700" />
               </div>
