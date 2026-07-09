@@ -9,6 +9,12 @@ import img3 from "@/assets/portfoliodetail/portone/tracking-3.png";
 import img4 from "@/assets/portfoliodetail/porttwo/monitoring-1.png";
 import img5 from "@/assets/portfoliodetail/porttwo/monitoring-2.png";
 import img6 from "@/assets/portfoliodetail/porttwo/monitoring-3.png";
+import img7 from "@/assets/portfoliodetail/portthree/warehouse-1.png";
+import img8 from "@/assets/portfoliodetail/portthree/warehouse-2.png";
+import img9 from "@/assets/portfoliodetail/portthree/warehouse-3.png";
+import img10 from "@/assets/portfoliodetail/portfour/pipeline-1.png";
+import img11 from "@/assets/portfoliodetail/portfour/pipeline-2.png";
+import img12 from "@/assets/portfoliodetail/portfour/pipeline-3.png";
 
 const allPortfolios = [
   { 
@@ -26,6 +32,22 @@ const allPortfolios = [
     tag: "Fullstack", 
     stack: ["PHP", "JavaScript", "Leaflet.js", "MySQL"], 
     images: [img4, img5, img6] // Ganti dengan 3 screenshot project terkait
+  },
+  { 
+    year: "2026", 
+    slug: "warehouse-monitoring",
+    title: "Warehouse Monitoring",
+    tag: "Fullstack", 
+    stack: ["PHP", "JavaScript", "Leaflet.js", "MySQL"], 
+    images: [img7, img8, img9] // Ganti dengan 3 screenshot project terkait
+  },
+  { 
+    year: "2026", 
+    slug: "customer-pipeline",
+    title: "Customer Pipeline",
+    tag: "Fullstack", 
+    stack: ["PHP", "JavaScript", "Leaflet.js", "MySQL"], 
+    images: [img10, img11, img12] // Ganti dengan 3 screenshot project terkait
   },
   // ... tambahkan images untuk data lainnya
 ];

@@ -13,6 +13,18 @@ import monitoring1Img from "@/assets/portfoliodetail/porttwo/monitoring-1.png";
 import monitoring2Img from "@/assets/portfoliodetail/porttwo/monitoring-2.png";
 import monitoring3Img from "@/assets/portfoliodetail/porttwo/monitoring-3.png";
 
+import warehouseImg from "@/assets/portfoliodetail/portthree/warehouse.png";
+import warehouseheroImg from "@/assets/portfoliodetail/portthree/warehouse-hero.png";
+import warehouse1Img from "@/assets/portfoliodetail/portthree/warehouse-1.png";
+import warehouse2Img from "@/assets/portfoliodetail/portthree/warehouse-2.png";
+import warehouse3Img from "@/assets/portfoliodetail/portthree/warehouse-3.png";
+
+import pipelineImg from "@/assets/portfoliodetail/portfour/pipeline.png";
+import pipelineheroImg from "@/assets/portfoliodetail/portfour/pipeline-hero.png";
+import pipeline1Img from "@/assets/portfoliodetail/portfour/pipeline-1.png";
+import pipeline2Img from "@/assets/portfoliodetail/portfour/pipeline-2.png";
+import pipeline3Img from "@/assets/portfoliodetail/portfour/pipeline-3.png";
+
 // ─── Animation variants ───────────────────────────────────────────────────────
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -102,7 +114,7 @@ const portfolioData: Record<string, PortfolioItem> = {
     liveUrl: "https://unichem.co.id",
     liveLabel: "unichem.co.id — live & production ready",
   },
-  "tracking-system1": {
+  "warehouse-monitoring": {
     tag: "Case Study — Fullstack",
     title: "System ",
     titleEm: "Tracking Truck",
@@ -110,8 +122,54 @@ const portfolioData: Record<string, PortfolioItem> = {
     year: "2026",
     role: "FULLSTACK DEVELOPER",
     duration: "-",
-    heroImg: trackingheroImg,
-    detailImgs: [trackingImg, tracking1Img],
+    heroImg: warehouseheroImg,
+    detailImgs: [warehouse1Img, warehouse2Img, warehouse3Img],
+    problem: {
+      title: "Pendaftaran manual yang lambat",
+      desc: "Klien mengandalkan form Google dan WhatsApp untuk pendaftaran kursus. Proses ini memakan waktu admin 3–4 jam per hari dan sering menyebabkan double booking serta data yang tidak sinkron.",
+    },
+    solution: {
+      title: "Platform registrasi terintegrasi",
+      desc: "Membangun web app dengan dashboard admin real-time, sistem slot otomatis, dan notifikasi email. Proses pendaftaran turun dari 3 langkah manual menjadi 1 klik konfirmasi.",
+    },
+    stack: ["React", "TypeScript", "Node.js", "PostgreSQL", "Tailwind CSS", "Prisma ORM", "Vercel", "Resend"],
+    protectedurl: 1,
+    liveUrl: "https://unichem.co.id",
+    liveLabel: "unichem.co.id — live & production ready",
+  },
+    "customer-pipeline": {
+    tag: "Case Study — Fullstack",
+    title: "System ",
+    titleEm: "Customer Pipeline",
+    client: "PT UNICHEM CANDI INDONESIA",
+    year: "2026",
+    role: "FULLSTACK DEVELOPER",
+    duration: "-",
+    heroImg: pipelineheroImg,
+    detailImgs: [pipeline1Img, pipeline2Img, pipeline3Img],
+    problem: {
+      title: "Pendaftaran manual yang lambat",
+      desc: "Klien mengandalkan form Google dan WhatsApp untuk pendaftaran kursus. Proses ini memakan waktu admin 3–4 jam per hari dan sering menyebabkan double booking serta data yang tidak sinkron.",
+    },
+    solution: {
+      title: "Platform registrasi terintegrasi",
+      desc: "Membangun web app dengan dashboard admin real-time, sistem slot otomatis, dan notifikasi email. Proses pendaftaran turun dari 3 langkah manual menjadi 1 klik konfirmasi.",
+    },
+    stack: ["React", "TypeScript", "Node.js", "PostgreSQL", "Tailwind CSS", "Prisma ORM", "Vercel", "Resend"],
+    protectedurl: 1,
+    liveUrl: "https://unichem.co.id",
+    liveLabel: "unichem.co.id — live & production ready",
+  },
+  "test": {
+    tag: "Case Study — Fullstack",
+    title: "System ",
+    titleEm: "Tracking Truck",
+    client: "PT UNICHEM CANDI INDONESIA",
+    year: "2026",
+    role: "FULLSTACK DEVELOPER",
+    duration: "-",
+    heroImg: warehouseheroImg,
+    detailImgs: [warehouse1Img, warehouse2Img, warehouse3Img],
     stats: [
       { num: "~3h", label: "Waktu admin terpangkas per hari" },
       { num: "1×", label: "Klik konfirmasi, dari 3 langkah manual" },

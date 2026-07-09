@@ -1,13 +1,15 @@
 import { useNavigate } from "react-router-dom";
 import trackingImg from "@/assets/portfoliodetail/portone/tracking.png";
 import monitoringImg from "@/assets/portfoliodetail/porttwo/monitoring.png";
+import warehouseImg from "@/assets/portfoliodetail/portthree/warehouse.png";
+import pipelineImg from "@/assets/portfoliodetail/portfour/pipeline.png";
 
 const portfolios = [
   {
     slug: "tracking-system",
     title: "System Tracking",
     tag: "Fullstack",
-    desc: "logistics and data monitoring system",
+    desc: "logistics and data monitoring system for efficient tracking",
     img: trackingImg,
   },
   {
@@ -17,6 +19,20 @@ const portfolios = [
     desc: "real-time data visualization and monitoring dashboard",
     img: monitoringImg,
   },
+  {
+    slug: "warehouse-monitoring",
+    title: "Warehouse Monitoring",
+    tag: "Fullstack",
+    desc: "real-time warehouse monitoring and management system",
+    img: warehouseImg,
+  },
+  {
+    slug: "customer-pipeline",
+    title: "Customer Pipeline",
+    tag: "Fullstack",
+    desc: "customer relationship management and pipeline tracking system",
+    img: pipelineImg,
+  }
 ];
 
 const PortfolioSection = () => {
